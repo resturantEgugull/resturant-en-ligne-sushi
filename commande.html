@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Sushi Global Egugul</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<header class="no-print">
+    <div class="logo">🍣 Sushi Global Egugul</div>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="commande.html">Menu</a>
+    </nav>
+    <button onclick="window.print()" class="btn-pdf">📄 Télécharger le Menu PDF</button>
+</header>
+
+<div class="menu-container">
+    <h2 class="section-title">Notre Assortiment Premium</h2>
+    <div class="grid-layout">
+        <script src="res.js"></script>
+        <script>
+            // كتابة الصور من 1 إلى 43 مرة واحدة فقط مع زر الواتساب
+            for (let i = 1; i <= 43; i++) {
+                document.write(`
+                    <div class="item-card">
+                        <img src="img${i}.jpeg" alt="Sushi ${i}">
+                        <p>Assortiment Premium ${i}</p>
+                        <button class="btn-whatsapp no-print" onclick="sendOrder('Assortiment Premium #${i}')">
+                            💬 Commander
+                        </button>
+                    </div>
+                `);
+            }
+        </script>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2 class="section-title">Offres Box Spéciales</h2>
+    <div class="grid-layout">
+        <div class="item-card">
+            <img src="img17.jpeg" alt="Box Me">
+            <p>Box Me</p>
+            <button class="btn-whatsapp no-print" onclick="sendOrder('Box Me')">💬 Commander</button>
+        </div>
+        <div class="item-card">
+            <img src="img9.jpeg" alt="Box Saffron">
+            <p>Box Saffron</p>
+            <button class="btn-whatsapp no-print" onclick="sendOrder('Box Saffron')">💬 Commander</button>
+        </div>
+        <div class="item-card">
+            <img src="img10.jpeg" alt="Box Beauty">
+            <p>Box Beauty</p>
+            <button class="btn-whatsapp no-print" onclick="sendOrder('Box Beauty')">💬 Commander</button>
+        </div>
+        <div class="item-card">
+            <img src="img18.jpeg" alt="Box Paradise">
+            <p>Box Paradise</p>
+            <button class="btn-whatsapp no-print" onclick="sendOrder('Box Paradise')">💬 Commander</button>
+        </div>
+        <div class="item-card">
+            <img src="img19.jpeg" alt="Box Summer">
+            <p>Box Summer</p>
+            <button class="btn-whatsapp no-print" onclick="sendOrder('Box Summer')">💬 Commander</button>
+        </div>
+        <div class="item-card">
+            <img src="img20.jpeg" alt="Box Sea">
+            <p>Box Sea</p>
+            <button class="btn-whatsapp no-print" onclick="sendOrder('Box Sea')">💬 Commander</button>
+        </div>
+    </div>
+</div>
+
+<footer class="no-print">
+    <p>© 2026 Sushi Global Egugul - Marrakech | Qualité & Fraîcheur</p>
+</footer>
+
+</body>
+</html>
