@@ -66,31 +66,164 @@ nav a {
 
 .item-card:hover { transform: translateY(-5px); border-color: #e67e22; }
 
-.item-card img { width: 100%; height: 180px; object-fit: cover; }
+.item-card img { width: 60%; height: 160px; object-fit: cover; }
 
 .item-card p { padding: 15px; font-weight: bold; font-size: 0.95rem; margin: 0; }
 
-/* زر الواتساب */
 .btn-whatsapp {
-    background-color: #25d366;
+    background-color: #e67e22;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-    width: 80%;
+    width: 85%;
     margin: 5px auto;
     transition: 0.3s;
 }
 
-.btn-whatsapp:hover { background-color: #128c7e; }
+.btn-whatsapp:hover { background-color: #d35400; }
 
 footer { text-align: center; padding: 30px; background: #111; border-top: 1px solid #333; }
 
+/* ================= الستيل الجديد د البوتون العائم (Fixe) ================= */
+.floating-cart-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: sans-serif;
+}
+
+/* المربع الأخضر د السلة */
+.cart-badge-btn {
+    background-color: #8cc600; /* نفس لون الصورة لي صيفطتي أخضر فاقع */
+    width: 65px;
+    height: 65px;
+    border-radius: 8px; /* مربع بأطراف دائرية خفيفة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.cart-icon {
+    font-size: 28px;
+}
+
+/* الدائرة الزرقاء ديال الحساب */
+.cart-counter-blue {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #1e90ff; /* اللون الأزرق */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+
+/* نافذة السلة الصغير (Pop-up) */
+.cart-modal-box {
+    display: none; /* مخفية ف الأول */
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 320px;
+    background: #111;
+    border: 2px solid #8cc600;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    direction: rtl;
+}
+
+/* تفعيل فتح السلة عبر الـ JavaScript */
+.cart-modal-box.active {
+    display: block;
+}
+
+.cart-modal-box h3 {
+    margin: 0 0 10px 0;
+    color: #8cc600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+}
+
+.cart-items-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.empty-cart-msg {
+    color: #888;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 6px;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-info img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-actions button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cart-item-actions button:hover {
+    background: #8cc600;
+}
+
+.btn-send-whatsapp {
+    background-color: #25d366;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+/* ======================================================= */
+
 /* إعدادات الطباعة للـ PDF */
 @media print {
-    .no-print, .btn-whatsapp { display: none !important; }
+    .no-print, .btn-whatsapp, .floating-cart-wrapper { display: none !important; }
     body { background-color: white !important; color: black !important; }
     .menu-container { padding: 0; }
     .section-title { color: black !important; font-size: 1.8rem; margin: 15px 0; }
