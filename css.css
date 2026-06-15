@@ -64,11 +64,11 @@ nav a {
     padding-bottom: 15px;
 }
 
-.item-card:hover { transform: translateY(-5px); border-color: #e67e22; }
+.item-card:hover { transform: translateY(2px); border-color: #e67e22; }
 
 .item-card img { width: 60%; height: 160px; object-fit: cover; }
 
-.item-card p { padding: 15px; font-weight: bold; font-size: 0.95rem; margin: 0; }
+.item-card p { padding: 10px; font-weight: bold; font-size: 0.95rem; margin: 0; }
 
 .btn-whatsapp {
     background-color: #e67e22;
